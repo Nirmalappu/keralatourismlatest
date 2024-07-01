@@ -497,17 +497,62 @@ form button {
 }
 
 @media screen and (max-width: 768px) {
-
-    body,
-    html {
+    body, html {
         font-size: 14px;
+    }
+    
+    .destinations {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .destination-item {
+        flex: 0 0 100%;
+    }
+
+    .form-container, form {
+        width: 80%;
     }
 }
 
 @media screen and (max-width: 480px) {
-
-    body,
-    html {
+    body, html {
         font-size: 12px;
+    }
+
+    .form-container, form {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1023px) {
+    .destinations {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .destination-item {
+        flex: 0 0 48%;
+    }
+
+    .form-container, form {
+        width: 60%;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .destinations {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+    .destination-item {
+        flex: 0 0 30%;
+    }
+
+    .form-container, form {
+        width: 50%;
     }
 }
